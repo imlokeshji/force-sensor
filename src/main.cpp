@@ -1,8 +1,13 @@
 #include <Arduino.h>
+int fsrPin = A0;
 void setup() {
-// write your initialization code here
+
+    Serial.begin(9600);
 }
 
 void loop() {
-// write your code here
+    int fsrReading = analogRead(fsrPin);
+    Serial.print("Analog reading = ");
+    Serial.println(fsrReading);
+    delay(100);
 }
